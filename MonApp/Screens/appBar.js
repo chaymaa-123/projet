@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function AppBar() {
   return (
     <View style={styles.appBar}>
-      <Text style={styles.title}>Mon Application Élégante</Text>
+      <Text style={styles.title}>Design </Text>
     </View>
   );
 }
@@ -12,15 +12,15 @@ export default function AppBar() {
 const styles = StyleSheet.create({
   appBar: {
     height: 60,
-    backgroundColor: '#1E3A8A',
+    backgroundColor: '#121212', // Noir Profond
     justifyContent: 'center',
     alignItems: 'center',
     elevation: 6,
     borderBottomWidth: 1,
-    borderBottomColor: '#F8E9EB',
+    borderBottomColor: '#FFD700', // Or Pâle
   },
   title: {
-    color: '#FFFFFF', 
+    color: '#FFFFFF', // Texte Blanc
     fontSize: 20,
     fontWeight: '700',
   },

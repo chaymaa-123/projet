@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, Switch, TextInput } from 'react-native';
 function SettingsScreen() {
     const [notificationsEnabled, setNotificationsEnabled] = useState(true);
     const [themeEnabled, setThemeEnabled] = useState(false);
-    const [username, setUsername] = useState('Utilisateur Élégant');
+    const [username, setUsername] = useState('Utilisateur ');
 
     return (
         <View style={styles.container}>
@@ -16,8 +16,8 @@ function SettingsScreen() {
                 <Switch
                     onValueChange={setNotificationsEnabled}
                     value={notificationsEnabled}
-                    trackColor={{ false: "#E5E7EB", true: "#F06292" }} 
-                    thumbColor={notificationsEnabled ? "#1E3A8A" : "#F4F3F4"}
+                    trackColor={{ false: "#E5E7EB", true: "#333333" }} // Gris/Noir
+                    thumbColor={notificationsEnabled ? "#FFD700" : "#F5F5F5"} // Or Pâle
                 />
             </View>
 
@@ -27,8 +27,8 @@ function SettingsScreen() {
                 <Switch
                     onValueChange={setThemeEnabled}
                     value={themeEnabled}
-                    trackColor={{ false: "#E5E7EB", true: "#1E3A8A" }} 
-                    thumbColor={themeEnabled ? "#F8E9EB" : "#F4F3F4"}
+                    trackColor={{ false: "#E5E7EB", true: "#FFD700" }} // Or Pâle
+                    thumbColor={themeEnabled ? "#121212" : "#F5F5F5"} // Noir
                 />
             </View>
             
@@ -38,8 +38,8 @@ function SettingsScreen() {
                 style={styles.textInput}
                 onChangeText={setUsername}
                 value={username}
-                placeholder="Entrez votre nom"
-                placeholderTextColor="#A0AEC0"
+                placeholder="Entrez votre"
+                placeholderTextColor="#A0A0A0"
             />
             
             <Text style={styles.footerText}>
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 24,
         fontWeight: 'bold',
-        color: '#1E3A8A',
+        color: '#121212',
         marginBottom: 40,
         textAlign: 'center',
     },
@@ -69,33 +69,33 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingVertical: 18,
         borderBottomWidth: 1,
-        borderBottomColor: '#F8E9EB',
+        borderBottomColor: '#F5F5F5',
     },
     settingLabel: {
         fontSize: 18,
-        color: '#000000',
+        color: '#333333',
         fontWeight: '500',
     },
     inputLabel: {
         fontSize: 16,
-        color: '#4B5563',
+        color: '#333333',
         marginTop: 40,
         marginBottom: 10,
     },
     textInput: {
         height: 50,
-        borderColor: '#1E3A8A',
+        borderColor: '#121212',
         borderWidth: 1,
         borderRadius: 8,
         paddingHorizontal: 15,
         fontSize: 16,
-        color: '#000000',
-        backgroundColor: '#F8E9EB',
+        color: '#121212',
+        backgroundColor: '#F5F5F5',
     },
     footerText: {
         marginTop: 60,
         fontSize: 14,
-        color: '#9CA3AF',
+        color: '#A0A0A0',
         textAlign: 'center',
     }
 });

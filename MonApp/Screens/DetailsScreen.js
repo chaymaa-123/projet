@@ -25,7 +25,7 @@ function DetailsScreen({ route, navigation }) {
             <Button
                 title="Retour à l'Accueil"
                 onPress={() => navigation.goBack()}
-                color="#F06292"
+                color="#333333" // Bouton gris foncé
             />
         </View>
     );
@@ -41,28 +41,28 @@ const styles = StyleSheet.create({
     header: {
         fontSize: 26,
         fontWeight: '600',
-        color: '#000000',
+        color: '#121212',
         marginBottom: 40,
     },
     dataCard: {
         width: '85%',
         padding: 30,
         marginBottom: 40,
-        backgroundColor: '#F8E9EB',
+        backgroundColor: '#F5F5F5', // Gris très clair
         borderRadius: 15,
         borderLeftWidth: 5,
-        borderLeftColor: '#1E3A8A',
+        borderLeftColor: '#FFD700', // Or Pâle
     },
     label: {
         fontSize: 16,
-        color: '#4B5563',
+        color: '#333333',
         fontWeight: '500',
         marginTop: 15,
     },
     value: {
         fontSize: 20,
         fontWeight: 'bold',
-        color: '#1E3A8A',
+        color: '#121212',
         marginBottom: 10,
     },
     idContainer: {
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     idValue: {
         fontSize: 42,
         fontWeight: '900',
-        color: '#F06292',
+        color: '#FFD700', // Or Pâle pour l'emphase
         marginTop: 5,
     }
 });
