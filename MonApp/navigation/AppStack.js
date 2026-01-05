@@ -1,5 +1,5 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack"; 
-import TodoListScreen from "../Screens/TodeListScreen"; 
+import TodoListScreen from "../Screens/TodoListScreen"; 
 import TodoDetailsScreen from "../Screens/TodoDetailsScreen"; 
  
 const Stack = createNativeStackNavigator(); 

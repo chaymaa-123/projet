@@ -4,6 +4,9 @@ import AppDrawer from "./navigation/AppDrawer";
 import LoginScreen from "./Screens/LoginScreen"; 
 import { useContext } from "react"; 
  
+import { Provider } from "react-redux"; 
+import { store } from "./store/store"; 
+ 
 function RootNavigator() { 
  const { user } = useContext(AuthContext); 
  
@@ -12,10 +15,12 @@ function RootNavigator() {
  
 export default function App() { 
  return ( 
-   <AuthProvider> 
-     <NavigationContainer> 
-       <RootNavigator /> 
-     </NavigationContainer> 
-   </AuthProvider> 
+   <Provider store={store}> 
+     <AuthProvider> 
+       <NavigationContainer> 
+         <RootNavigator /> 
+       </NavigationContainer> 
+     </AuthProvider> 
+   </Provider> 
  ); 
 } 
